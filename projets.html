@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets — Mathis Brefdent</title>
+  <meta name="description" content="Les projets de Mathis Brefdent : galerie Hackintosh, iMac 2009, machine virtuelle iOS, OpenDeck et serveur Umbrel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo">Mathis<span>.</span></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul id="menu">
+      <li><a class="link" href="index.html#apropos">À propos</a></li>
+      <li><a class="link" href="index.html#competences">Compétences</a></li>
+      <li><a class="link active" href="projets.html">Projets</a></li>
+      <li><a class="link" href="index.html#parcours">Parcours</a></li>
+      <li><a class="link" href="index.html#contact">Contact</a></li>
+      <li><button class="theme-btn" aria-label="Changer de thème">◐</button></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Projets</p>
+      <h1>Projets personnels</h1>
+      <p class="lead">Projets réalisés par intérêt technique, présentés avec leurs photographies et captures d'écran. Cliquez sur une image pour l'agrandir.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:24px; padding-bottom:0">
+    <div class="container">
+      <div class="filters" role="group" aria-label="Filtrer les projets">
+        <button class="filter active" data-filter="all">Tous</button>
+        <button class="filter" data-filter="hackintosh">Hackintosh</button>
+        <button class="filter" data-filter="virtualisation">Virtualisation</button>
+        <button class="filter" data-filter="embarque">Embarqué</button>
+        <button class="filter" data-filter="selfhost">Auto-hébergement</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="projects">
+
+    <!-- ===================== OPENDECK ===================== -->
+    <article class="project" id="opendeck" data-cat="embarque">
+      <div class="container">
+        <p class="eyebrow">Projet actuel · Systèmes embarqués</p>
+        <h2>OpenDeck <span class="badge">En développement</span></h2>
+        <div class="tags"><span class="tag">ESP32-S3</span><span class="tag">Écran tactile</span><span class="tag">Application de bureau</span></div>
+        <div class="prose">
+          <p>OpenDeck est un <strong>contrôleur personnalisé de type Stream Deck</strong> : un boîtier doté d'un écran tactile piloté par un ESP32-S3, relié au PC par USB, et une application de bureau permettant de configurer ses pages. Je dirige l'architecture, les fonctionnalités et le développement du projet, avec DeepSeek V4.1 comme assistant : l'IA m'assiste, elle ne gère pas le projet à ma place.</p>
+          <p class="note">Le projet est en cours de développement et n'est pas encore open source : il n'existe pas de dépôt public à ce jour.</p>
+        </div>
+
+        <h3 class="sub">Fonctionnalités visibles sur les photographies</h3>
+        <ul class="checklist">
+          <li><strong>Macro</strong> : une grille de raccourcis (afficher le bureau, vue des tâches, capture d'écran, explorateur, copier, coller, annuler, volume, lecture/pause…).</li>
+          <li><strong>Now Playing</strong> : titre, artiste, pochette et commandes du morceau en cours de lecture.</li>
+          <li><strong>System</strong> : utilisation du CPU, de la RAM, du GPU, du réseau et du disque. La température du CPU affiche encore « -- » : cette fonction n'est pas encore opérationnelle.</li>
+          <li><strong>Bongo Cat</strong> : une animation qui réagit à la frappe au clavier et affiche le nombre de mots par minute.</li>
+        </ul>
+
+        <h3 class="sub">Le boîtier (ESP32-S3)</h3>
+        <div class="gallery" data-gallery>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/esp32-macro-demo.jpg"><img src="assets/opendeck/esp32-macro-demo.jpg" alt="Écran du boîtier OpenDeck affichant la page Macro" width="1600" height="1200" loading="lazy"></button><figcaption>Page Macro</figcaption></figure>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/esp32-now-playing.jpg"><img src="assets/opendeck/esp32-now-playing.jpg" alt="Écran du boîtier OpenDeck affichant la musique en cours de lecture" width="1600" height="1200" loading="lazy"></button><figcaption>Page Now Playing</figcaption></figure>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/esp32-system-usage.jpg"><img src="assets/opendeck/esp32-system-usage.jpg" alt="Écran du boîtier OpenDeck affichant l'utilisation du système" width="1600" height="1200" loading="lazy"></button><figcaption>Page System</figcaption></figure>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/esp32-bongo-cat.jpg"><img src="assets/opendeck/esp32-bongo-cat.jpg" alt="Écran du boîtier OpenDeck affichant le Bongo Cat" width="1600" height="1200" loading="lazy"></button><figcaption>Page Bongo Cat</figcaption></figure>
+        </div>
+
+        <h3 class="sub">L'application de bureau</h3>
+        <p class="muted">Dans ces captures, la fenêtre de l'application s'intitule « DeckLink ». Elle se connecte à l'appareil par port série, permet d'éditer les pages et d'envoyer la configuration vers l'écran (« Sync to device »).</p>
+        <div class="gallery wide" data-gallery>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/app-edit.jpg"><img src="assets/opendeck/app-edit.jpg" alt="Application de bureau : édition d'une page Quick Start et de l'action d'un bouton" width="1426" height="913" loading="lazy"></button><figcaption>Édition d'une page (Quick Start)</figcaption></figure>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/app-macro-demo.jpg"><img src="assets/opendeck/app-macro-demo.jpg" alt="Application de bureau : page Macro" width="1426" height="913" loading="lazy"></button><figcaption>Page Macro</figcaption></figure>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/app-now-playing.jpg"><img src="assets/opendeck/app-now-playing.jpg" alt="Application de bureau : page Now Playing" width="1426" height="913" loading="lazy"></button><figcaption>Page Now Playing</figcaption></figure>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/app-system-usage.jpg"><img src="assets/opendeck/app-system-usage.jpg" alt="Application de bureau : page System avec CPU, RAM, GPU, réseau et disque" width="1426" height="913" loading="lazy"></button><figcaption>Page System</figcaption></figure>
+          <figure><button class="zoom" type="button" data-full="assets/opendeck/app-bongo-cat.jpg"><img src="assets/opendeck/app-bongo-cat.jpg" alt="Application de bureau : page Bongo Cat" width="1426" height="913" loading="lazy"></button><figcaption>Page Bongo Cat</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================== HACKINTOSH ===================== -->
+    <article class="project" id="hackintosh" data-cat="hackintosh">
+      <div class="container">
+        <p class="eyebrow">Hackintosh</p>
+        <h2>Galerie Hackintosh</h2>
+        <div class="tags"><span class="tag">OpenCore</span><span class="tag">Guide Dortania</span><span class="tag">NootedRed</span><span class="tag">macOS Monterey à Tahoe</span></div>
+        <div class="prose">
+          <p>Un Hackintosh est un PC non-Apple sur lequel est installé macOS. Depuis 2022, j'installe et je configure macOS sur différentes machines avec <strong>OpenCore</strong>, un chargeur de démarrage qui permet de lancer macOS sur du matériel non Apple, en suivant le guide Dortania.</p>
+          <p>Pour les processeurs graphiques intégrés AMD, l'accélération graphique sur macOS passe par <strong>NootedRed</strong>, un pilote (kext) développé par ChefKissInc pour certains GPU intégrés AMD. L'Ideapad 3 15ADA05 présenté ci-dessous est un exemple de machine AMD : la fenêtre « À propos de ce Mac » de la photo affiche une puce graphique AMD Radeon.</p>
+        </div>
+
+        <div class="machines">
+
+          <section class="machine" aria-labelledby="m-main">
+            <h3 id="m-main">Main PC</h3>
+            <div class="tags"><span class="tag">macOS Ventura</span><span class="tag">macOS Tahoe</span></div>
+            <div class="gallery" data-gallery>
+              <figure><button class="zoom" type="button" data-full="assets/hackintosh/main-pc-ventura.jpg"><img src="assets/hackintosh/main-pc-ventura.jpg" alt="Main PC sous macOS Ventura : fenêtre « À propos de ce Mac »" width="1200" height="1600" loading="lazy"></button><figcaption>macOS Ventura</figcaption></figure>
+              <figure><button class="zoom" type="button" data-full="assets/hackintosh/main-pc-tahoe.jpg"><img src="assets/hackintosh/main-pc-tahoe.jpg" alt="Main PC sous macOS Tahoe : bureau avec un terminal ouvert" width="1600" height="900" loading="lazy"></button><figcaption>macOS Tahoe</figcaption></figure>
+            </div>
+          </section>
+
+          <section class="machine" aria-labelledby="m-hp">
+            <h3 id="m-hp">HP EliteBook 820 G3</h3>
+            <div class="tags"><span class="tag">macOS Monterey</span><span class="tag">macOS Ventura</span></div>
+            <div class="gallery" data-gallery>
+              <figure><button class="zoom" type="button" data-full="assets/hackintosh/hp-elitebook-820-g3-monterey.jpg"><img src="assets/hackintosh/hp-elitebook-820-g3-monterey.jpg" alt="HP EliteBook 820 G3 sous macOS Monterey" width="1600" height="900" loading="lazy"></button><figcaption>macOS Monterey</figcaption></figure>
+              <figure><button class="zoom" type="button" data-full="assets/hackintosh/hp-elitebook-820-g3-ventura.jpg"><img src="assets/hackintosh/hp-elitebook-820-g3-ventura.jpg" alt="HP EliteBook 820 G3 sous macOS Ventura" width="1600" height="1200" loading="lazy"></button><figcaption>macOS Ventura</figcaption></figure>
+            </div>
+          </section>
+
+          <section class="machine" aria-labelledby="m-lenovo">
+            <h3 id="m-lenovo">Lenovo Ideapad 3 15ADA05</h3>
+            <div class="tags"><span class="tag">macOS Tahoe</span><span class="tag">GPU intégré AMD</span></div>
+            <div class="gallery" data-gallery>
+              <figure><button class="zoom" type="button" data-full="assets/hackintosh/lenovo-ideapad-3-15ada05-tahoe.jpg"><img src="assets/hackintosh/lenovo-ideapad-3-15ada05-tahoe.jpg" alt="Lenovo Ideapad 3 15ADA05 sous macOS Tahoe" width="1200" height="1600" loading="lazy"></button><figcaption>macOS Tahoe</figcaption></figure>
+            </div>
+          </section>
+
+          <section class="machine" aria-labelledby="m-thinkpad">
+            <h3 id="m-thinkpad">ThinkPad</h3>
+            <div class="tags"><span class="tag">macOS Tahoe</span></div>
+            <div class="gallery" data-gallery>
+              <figure><button class="zoom" type="button" data-full="assets/hackintosh/thinkpad-tahoe.jpg"><img src="assets/hackintosh/thinkpad-tahoe.jpg" alt="ThinkPad sous macOS Tahoe, avec une clé USB branchée" width="1600" height="1200" loading="lazy"></button><figcaption>macOS Tahoe</figcaption></figure>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================== iMAC 2009 ===================== -->
+    <article class="project" id="imac" data-cat="hackintosh">
+      <div class="container project-grid">
+        <div>
+          <p class="eyebrow">Mac ancien</p>
+          <h2>iMac 10,1 (fin 2009)</h2>
+          <div class="tags"><span class="tag">macOS Ventura</span><span class="tag">Mac non supporté</span></div>
+          <div class="prose">
+            <p>Ce projet se distingue d'un Hackintosh : il s'agit d'un <strong>véritable Mac</strong>, trop ancien pour que macOS Ventura soit officiellement supporté par Apple. J'y ai installé macOS Ventura.</p>
+            <p>La photo montre l'iMac sous macOS Ventura, avec la fenêtre « À propos de ce Mac » et un terminal ouvert.</p>
+          </div>
+        </div>
+        <div class="gallery single" data-gallery>
+          <figure><button class="zoom" type="button" data-full="assets/imac/imac-late-2009-ventura.jpg"><img src="assets/imac/imac-late-2009-ventura.jpg" alt="iMac 10,1 de fin 2009 sous macOS Ventura" width="1600" height="1200" loading="lazy"></button><figcaption>iMac 10,1 sous macOS Ventura</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================== iOS VM ===================== -->
+    <article class="project" id="ios-vm" data-cat="virtualisation">
+      <div class="container project-grid">
+        <div>
+          <p class="eyebrow">Émulation &amp; virtualisation</p>
+          <h2>Machine virtuelle iOS</h2>
+          <div class="tags"><span class="tag">QEMU</span><span class="tag">Inferno</span><span class="tag">iOS 14</span><span class="tag">Arch Linux</span></div>
+          <div class="prose">
+            <p>J'expérimente la virtualisation d'iOS 14 avec <strong>Inferno</strong>, un projet open source basé sur QEMU et développé par ChefKissInc, que je compile moi-même.</p>
+            <p>Une machine virtuelle <strong>Arch Linux</strong> complète l'environnement : elle sert à la restauration du système et à la compilation de QEMU.</p>
+            <p class="note">Inferno est un projet expérimental : je l'utilise à des fins d'apprentissage et d'expérimentation.</p>
+            <p>Sur la photo, le terminal est à gauche et iOS 14 s'affiche sur l'écran de droite.</p>
+          </div>
+        </div>
+        <div class="gallery single" data-gallery>
+          <figure><button class="zoom" type="button" data-full="assets/ios/ios14-inferno.jpg"><img src="assets/ios/ios14-inferno.jpg" alt="iOS 14 virtualisé sur un écran, sortie de terminal sur l'autre écran" width="1600" height="1200" loading="lazy"></button><figcaption>iOS 14 virtualisé avec Inferno</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================== UMBREL ===================== -->
+    <article class="project" id="umbrel" data-cat="selfhost">
+      <div class="container project-grid">
+        <div>
+          <p class="eyebrow">Auto-hébergement</p>
+          <h2>Serveur personnel Umbrel</h2>
+          <div class="tags"><span class="tag">umbrelOS</span><span class="tag">Docker</span></div>
+          <div class="prose">
+            <p>J'ai mis en place et j'administre un serveur personnel sur ordinateur portable avec <strong>Umbrel</strong>. J'y déploie et j'utilise des services conteneurisés avec Docker.</p>
+            <p>La capture montre la page d'accueil d'umbrelOS.</p>
+          </div>
+        </div>
+        <div class="gallery single" data-gallery>
+          <figure><button class="zoom" type="button" data-full="assets/umbrel/umbrelos-home.jpg"><img src="assets/umbrel/umbrelos-home.jpg" alt="Page d'accueil d'umbrelOS avec la liste des applications installées" width="1600" height="914" loading="lazy"></button><figcaption>Accueil d'umbrelOS</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================== AUTRES ===================== -->
+    <article class="project" id="autres" data-cat="embarque">
+      <div class="container">
+        <p class="eyebrow">Autres expérimentations</p>
+        <h2>Autres travaux</h2>
+        <div class="grid mini">
+          <div class="skill-card">
+            <h3>Ambilight personnel</h3>
+            <p class="muted">Conception et réalisation d'un système Ambilight à base d'ESP32 et de LEDs adressables.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Veille technologique</h3>
+            <p class="muted">Émulation de la PS5, décompilation et recompilation de jeux vidéo, et progrès de l'intelligence artificielle appliqués au développement logiciel.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<dialog id="lightbox" aria-label="Photo agrandie">
+  <button class="lb-close" type="button" aria-label="Fermer">✕</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Photo précédente">‹</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" type="button" aria-label="Photo suivante">›</button>
+</dialog>
+
+<footer>
+  <div class="container">© <span id="year"></span> Mathis Brefdent — Site hébergé sur GitHub Pages.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mathis Brefdent — Portfolio</title>
+  <meta name="description" content="Portfolio de Mathis Brefdent, lycéen en Terminale passionné d'informatique : Hackintosh, virtualisation, auto-hébergement et systèmes embarqués.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo">Mathis<span>.</span></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul id="menu">
+      <li><a class="link" href="#apropos">À propos</a></li>
+      <li><a class="link" href="#competences">Compétences</a></li>
+      <li><a class="link" href="projets.html">Projets</a></li>
+      <li><a class="link" href="#parcours">Parcours</a></li>
+      <li><a class="link" href="#contact">Contact</a></li>
+      <li><button class="theme-btn" aria-label="Changer de thème">◐</button></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Élève en Terminale · Informatique</p>
+        <h1>Mathis <em>Brefdent</em></h1>
+        <p class="lead">Élève en Terminale générale, passionné par l'informatique. Depuis 2022, je mène des projets personnels autour des systèmes d'exploitation, de la virtualisation, de l'auto-hébergement et des systèmes embarqués.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="projets.html">Consulter mes projets →</a>
+          <a class="btn btn-ghost" href="#contact">Me contacter</a>
+        </div>
+      </div>
+      <div class="avatar">
+        <img src="assets/ios/ios14-inferno.jpg" alt="Mon poste de travail : deux écrans, un portable ThinkPad et un clavier mécanique" width="1600" height="1200">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section id="apropos">
+    <div class="container reveal">
+      <div class="section-head">
+        <p class="eyebrow">À propos</p>
+        <h2>Présentation</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>Je suis scolarisé en Terminale générale au Lycée Saint Joseph à Argenteuil, avec les spécialités Mathématiques et Physique-Chimie et l'option Mathématiques expertes.</p>
+          <p>L'informatique, côté matériel comme côté logiciel, est mon principal centre d'intérêt. Depuis 2022, j'installe et je configure macOS sur différents PC avec OpenCore, en m'appuyant sur le guide Dortania. Je compile également des projets open source depuis GitHub, j'expérimente l'émulation et la virtualisation, et je résous les problèmes techniques rencontrés.</p>
+          <p>Je pratique une veille technologique active : émulation de la PS5, décompilation et recompilation de jeux vidéo et applications de l'intelligence artificielle au développement logiciel.<br>En dehors de l'informatique, je pratique la plongée et l'apnée, ainsi que le volley au sein de l'association sportive de mon lycée.</p>
+        </div>
+        <ul class="facts">
+          <li><span>Formation</span> Terminale générale</li>
+          <li><span>Spécialités</span> Maths, Physique-Chimie</li>
+          <li><span>Option</span> Maths expertes</li>
+          <li><span>Langues</span> Anglais B1+, Allemand</li>
+          <li><span>Diplômes</span> Brevet (mention Bien), PSC1</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPÉTENCES ===== -->
+  <section id="competences">
+    <div class="container reveal">
+      <div class="section-head">
+        <p class="eyebrow">Compétences</p>
+        <h2>Compétences techniques</h2>
+        <p class="lead">Compétences acquises lors de mes stages en entreprise et par la pratique personnelle.</p>
+      </div>
+      <div class="skill-groups">
+        <div class="skill-card">
+          <h3>Systèmes &amp; matériel</h3>
+          <div class="chips">
+            <span class="chip">Hackintosh / OpenCore</span>
+            <span class="chip">Windows</span>
+            <span class="chip">Linux</span>
+            <span class="chip">macOS</span>
+            <span class="chip">ESP32</span>
+            <span class="chip">LEDs adressables</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Outils &amp; développement</h3>
+          <div class="chips">
+            <span class="chip">Docker</span>
+            <span class="chip">Umbrel</span>
+            <span class="chip">QEMU (compilation)</span>
+            <span class="chip">Compilation depuis GitHub</span>
+            <span class="chip">Environnements de dev</span>
+            <span class="chip">Dépannage technique</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Découvert en stage</h3>
+          <div class="chips">
+            <span class="chip">Ansible</span>
+            <span class="chip">Geneos</span>
+            <span class="chip">Dynatrace</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Traitement de données</span>
+            <span class="chip">Clés GPG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJETS EN VEDETTE ===== -->
+  <section id="projets">
+    <div class="container reveal">
+      <div class="section-head">
+        <p class="eyebrow">Projets</p>
+        <h2>Réalisations</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/opendeck/esp32-macro-demo.jpg" alt="Le Stream Deck OpenDeck affichant une grille de macros" width="1600" height="1200" loading="lazy">
+          <div class="card-body">
+            <h3>OpenDeck <span class="badge">Projet actuel</span></h3>
+            <div class="tags"><span class="tag">ESP32-S3</span><span class="tag">Application bureau</span></div>
+            <p>Contrôleur personnalisé de type Stream Deck : écran tactile ESP32 et application de bureau.</p>
+            <div class="card-links"><a href="projets.html#opendeck">Voir le projet →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/hackintosh/main-pc-tahoe.jpg" alt="Un Hackintosh sous macOS Tahoe" width="1600" height="900" loading="lazy">
+          <div class="card-body">
+            <h3>Galerie Hackintosh</h3>
+            <div class="tags"><span class="tag">OpenCore</span><span class="tag">macOS</span><span class="tag">NootedRed</span></div>
+            <p>Installation de macOS sur quatre PC non-Apple avec OpenCore, de Monterey à Tahoe.</p>
+            <div class="card-links"><a href="projets.html#hackintosh">Voir la galerie →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/imac/imac-late-2009-ventura.jpg" alt="Un iMac de fin 2009 sous macOS Ventura" width="1600" height="1200" loading="lazy">
+          <div class="card-body">
+            <h3>iMac fin 2009</h3>
+            <div class="tags"><span class="tag">macOS Ventura</span><span class="tag">Mac ancien</span></div>
+            <p>Installation de macOS Ventura sur un Mac ancien, non supporté officiellement par Apple.</p>
+            <div class="card-links"><a href="projets.html#imac">Voir le projet →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/ios/ios14-inferno.jpg" alt="iOS 14 virtualisé sur un écran, terminal sur l'autre" width="1600" height="1200" loading="lazy">
+          <div class="card-body">
+            <h3>Machine virtuelle iOS</h3>
+            <div class="tags"><span class="tag">QEMU</span><span class="tag">Inferno</span><span class="tag">iOS 14</span></div>
+            <p>Expérimentation de la virtualisation d'iOS 14 avec Inferno, un projet open source basé sur QEMU.</p>
+            <div class="card-links"><a href="projets.html#ios-vm">Voir le projet →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/umbrel/umbrelos-home.jpg" alt="Page d'accueil d'umbrelOS" width="1600" height="914" loading="lazy">
+          <div class="card-body">
+            <h3>Serveur perso Umbrel</h3>
+            <div class="tags"><span class="tag">umbrelOS</span><span class="tag">Docker</span></div>
+            <p>Serveur personnel sous Umbrel, hébergeant des services conteneurisés avec Docker.</p>
+            <div class="card-links"><a href="projets.html#umbrel">Voir le projet →</a></div>
+          </div>
+        </article>
+      </div>
+      <p class="more"><a class="btn btn-ghost" href="projets.html">Tous les projets →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== PARCOURS ===== -->
+  <section id="parcours">
+    <div class="container reveal">
+      <div class="section-head">
+        <p class="eyebrow">Parcours</p>
+        <h2>Formation et expériences</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item">
+          <span class="t-date">2026 — 2027</span>
+          <h3>Terminale générale, Lycée Saint Joseph (Argenteuil)</h3>
+          <p>Spécialités Mathématiques et Physique-Chimie, option Mathématiques expertes.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-date">16 au 27 juin 2025</span>
+          <h3>Stage de seconde à la SNCF (service RCAD)</h3>
+          <p>Découverte de différents métiers, notamment celui de Data Analyst. Création de tableaux de bord interactifs avec Power BI et traitement de données.</p>
+          <a class="t-link" href="docs/stage-seconde.pdf" target="_blank" rel="noopener">Voir le diaporama du stage (PDF) →</a>
+        </div>
+        <div class="t-item">
+          <span class="t-date">2024</span>
+          <h3>Brevet (mention Bien) et stage de troisième chez BNP Paribas</h3>
+          <p>Stage du 5 au 9 février, entité ALMT, équipe APS : outils de supervision d'applications (Geneos, Dynatrace), métier d'ingénieur de production, création d'un script Ansible et recherche sur le renouvellement d'une paire de clés GPG.</p>
+          <a class="t-link" href="docs/stage-3eme.pdf" target="_blank" rel="noopener">Voir le diaporama du stage (PDF) →</a>
+        </div>
+        <div class="t-item">
+          <span class="t-date">2023</span>
+          <h3>PSC1</h3>
+          <p>Prévention et secours civiques de niveau 1.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-date">Depuis 2022</span>
+          <h3>Début des projets informatiques personnels</h3>
+          <p>Installation et configuration de macOS sur différents PC avec OpenCore et le guide Dortania.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MA DÉMARCHE ===== -->
+  <section>
+    <div class="container reveal">
+      <div class="why">
+        <p class="eyebrow">Méthode</p>
+        <h2>Ma méthode de travail</h2>
+        <p>Je pars toujours d'un projet concret : étude de la documentation, mise en place, tests, puis résolution des problèmes jusqu'à obtenir un résultat stable. J'utilise également l'intelligence artificielle comme assistant de développement. Sur OpenDeck, je définis l'architecture, les fonctionnalités et les orientations du projet ; l'IA m'assiste, mais ne le pilote pas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CENTRES D'INTÉRÊT ===== -->
+  <section>
+    <div class="container reveal">
+      <div class="section-head">
+        <p class="eyebrow">Au-delà du numérique</p>
+        <h2>Centres d'intérêt</h2>
+      </div>
+      <div class="interests">
+        <div class="interest"><h3>Informatique</h3><p>Hardware, software et développement.</p></div>
+        <div class="interest"><h3>Jeux vidéo</h3><p>Dont l'émulation et la décompilation.</p></div>
+        <div class="interest"><h3>Auto &amp; moto</h3><p>Automobile et deux-roues.</p></div>
+        <div class="interest"><h3>Plongée &amp; apnée</h3><p>Niveau 1, pratique hebdomadaire depuis 2017.</p></div>
+        <div class="interest"><h3>Musique</h3><p>Une passion en dehors des écrans.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="container reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Me contacter</h2>
+      <p class="lead">Pour échanger sur mes projets ou mon parcours, n'hésitez pas à m'écrire.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:mathis.brefdent@gmail.com">mathis.brefdent@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> Mathis Brefdent — Site hébergé sur GitHub Pages.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
